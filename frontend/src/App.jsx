@@ -1,5 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 
+// API URL - uses environment variable in production, empty for local dev (proxy)
+const API_URL = import.meta.env.VITE_API_URL || ''
+
 function App() {
   const [storeUrl, setStoreUrl] = useState('clevrr-test.myshopify.com')
   const [message, setMessage] = useState('')
@@ -40,7 +43,7 @@ function App() {
     abortControllerRef.current = new AbortController()
 
     try {
-      const response = await fetch('/api/chat/', {
+      const response = await fetch(`${API_URL}/api/chat/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ store_url: storeUrl, query: currentMessage }),
