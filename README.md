@@ -203,4 +203,10 @@ of Gemini free model has reduced significantly , not able to perform complex tas
 
 *** These are some of real questions & responses from the agent tested by me on Fronted
 
+### Frontend deployed url -> https://lang-agent-ajdr.vercel.app/
+Note -> It might take 1 minute to spin up backedn if it is inactive for long time (hosted on free service)
+-> It might not repsonse if it have exceeded the Api limit (free tier)
+-> It supports simpler queries for now 
+-> Backedn is hosted from Staging branch 
+
 

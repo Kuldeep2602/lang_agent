@@ -189,7 +189,7 @@ function App() {
               Ask questions about your Shopify store data
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center', maxWidth: '500px' }}>
-              {['Show my products', 'Recent orders', 'Customer count', 'Total revenue'].map((q) => (
+              {['List 2 products', 'What is the price of...'].map((q) => (
                 <button
                   key={q}
                   onClick={() => setMessage(q)}
