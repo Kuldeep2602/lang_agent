@@ -182,8 +182,11 @@ def run_agent(
     messages = lc_chat_history + [HumanMessage(content=formatted_input)]
     
     try:
-        # Execute the agent
-        result = agent.invoke({"messages": messages})
+        # Execute the agent with recursion limit to prevent runaway iterations
+        result = agent.invoke(
+            {"messages": messages},
+            {"recursion_limit": 10}  # Limit reasoning loops to reduce API calls
+        )
         
         # Extract the output
         output = extract_final_response(result)

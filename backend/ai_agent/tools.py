@@ -6,6 +6,9 @@ from langchain_experimental.tools import PythonAstREPLTool
 
 from shopify.client import get_shopify_data, get_all_shopify_data
 
+# Limit items shown to LLM to reduce token usage
+MAX_ITEMS_FOR_LLM = 10
+
 
 @tool
 def get_shopify_data_tool(
@@ -55,7 +58,16 @@ def get_shopify_data_tool(
             params=parsed_params,
             store_url=store_url
         )
-        return json.dumps(result['data'], default=str)
+        data = result['data']
+        
+        # Truncate large responses to reduce LLM token usage
+        for key in list(data.keys()):
+            if isinstance(data[key], list) and len(data[key]) > MAX_ITEMS_FOR_LLM:
+                total_count = len(data[key])
+                data[key] = data[key][:MAX_ITEMS_FOR_LLM]
+                data[f'{key}_truncated'] = f"Showing {MAX_ITEMS_FOR_LLM} of {total_count} items"
+        
+        return json.dumps(data, default=str)
     except Exception as e:
         return json.dumps({
             "error": f"Shopify API error: {str(e)}"
@@ -117,6 +129,14 @@ def get_all_shopify_data_tool(
                     combined_data[key].extend(value)
                 else:
                     combined_data[key] = value
+        
+        # Truncate for LLM but note total count
+        for key in list(combined_data.keys()):
+            if isinstance(combined_data[key], list) and len(combined_data[key]) > MAX_ITEMS_FOR_LLM:
+                total_count = len(combined_data[key])
+                combined_data[f'{key}_total_count'] = total_count
+                combined_data[key] = combined_data[key][:MAX_ITEMS_FOR_LLM]
+                combined_data[f'{key}_truncated'] = f"Showing {MAX_ITEMS_FOR_LLM} of {total_count} items. Use python_repl to analyze all data."
         
         return json.dumps(combined_data, default=str)
     except Exception as e:
