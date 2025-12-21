@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: shopify-ai-backend
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn shopify_agent.wsgi:application"
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: ".onrender.com"
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+      - key: SHOPIFY_SHOP_NAME
+        sync: false
+      - key: SHOPIFY_ACCESS_TOKEN
+        sync: false
+      - key: SHOPIFY_API_VERSION
+        value: "2025-04"
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.11.0"

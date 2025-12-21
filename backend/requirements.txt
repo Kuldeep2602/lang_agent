@@ -7,3 +7,6 @@ langchain-google-genai>=2.0.0
 langchain-experimental>=0.3.0
 langgraph>=0.2.0
 pandas>=2.0.0
+gunicorn>=21.0.0
+whitenoise>=6.6.0
+django-cors-headers>=4.3.0
