@@ -163,20 +163,23 @@ Frontend -> `frontend/src/`
 
 ##  Questions & Answers (from Agent)
 
-Q.  list 2 products
+Q.  list 2 products ?
+
         Here are the top 2 products from your store based on a query for a limited list. The first product is a sample bar soap, and the second is a digital gift card.
         Product Details
         Title	ID	Status	Product Type
         (Sample) Coconut Bar Soap	7885649805405	active	—
         Gift Card	7885649969245	active	giftcard
 
-Q.  what is the price of Coconut Bar Soap
+Q.  what is the price of Coconut Bar Soap ?
+
         Based on the store data, the price for the product 'Coconut Bar Soap' is $0.00. Please note that this product is marked as a sample item.
         Product Price Details
         Product Title	Price
         (Sample) Coconut Bar Soap	$0.00
 
-Q.  what is the price of Gift card
+Q.  what is the price of Gift card ?
+
         The 'Gift Card' product on this Shopify store is available in several denominations, ranging from $10.00 to $100.00.
         Gift Card Denominations
         denomination	price
@@ -185,13 +188,15 @@ Q.  what is the price of Gift card
         $50	50.00
         $100	100.00
 
-Q.  i want to buy  two $10 gift card of price 10
+Q.  i want to buy  two $10 gift card of price 10?
+
         Based on the store's product data, the requested gift card is available. The store offers a 'Gift Card' product with a '$10' denomination option, priced at $10.00 each. The total cost for two $10 gift cards would be $20.00.
         Gift Card Product Details
         Product Name	Denomination	Price	Quantity Requested	Total Price
         Gift Card	$10	$10.00	2	$20.00
 
-Q.  total how many gift cards in stock 
+Q.  total how many gift cards in stock ?
+
         Based on the product inventory data for the store, the 'Gift Card' product currently has 0 units in stock across all available denominations ($10, $25, $50, and $100).
         Gift Card Stock Details
         Variant	Stock Quantity
