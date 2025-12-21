@@ -3,7 +3,7 @@ services:
     name: shopify-ai-backend
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn shopify_agent.wsgi:application"
+    startCommand: "gunicorn shopify_agent.wsgi:application --timeout 120 --workers 1"
     envVars:
       - key: DEBUG
         value: "False"
