@@ -69,6 +69,7 @@ You have access to the following tools:
 
 ## Architecture
 
+```
 ┌─────────────────────────────────────────────────────────────────┐
 │                         FRONTEND (React)                        │
 │  ┌──────────┐  ┌──────────────┐  ┌─────────────────────────────┐│
@@ -119,6 +120,7 @@ You have access to the following tools:
 │                   Shopify Admin REST API                        │
 │        GET /admin/api/{version}/{orders|products|customers}.json│
 └─────────────────────────────────────────────────────────────────┘
+```
 
 
 # Key Components
