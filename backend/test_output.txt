@@ -1,0 +1,47 @@
+﻿.\venv\Scripts\python
+.exe : Creating test 
+database for alias 
+'default'...
+At line:1 char:1
++ .\venv\Scripts\pyth
+on.exe manage.py 
+test api.tests 2>&1 
+| Out-File -E ...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (Creatin   
+ g test d...as 'd    
+efault'...:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+
+.....Agent execution 
+failed
+..........Shopify 
+API error occurred
+.Shopify rate limit 
+exceeded
+.Agent execution 
+timed out
+Found 19 test(s).
+System check identified no issues (0 silenced).
+..
+---------------------
+---------------------
+---------------------
+-------
+Ran 19 tests in 
+0.027s
+
+OK
+Destroying test 
+database for alias 
+'default'...
+
