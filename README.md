@@ -206,17 +206,11 @@ Q.  total how many gift cards in stock ?
         $100 0
 
 Note -> If Query is too big not able to proceed , it throws error and as of december the capabilities 
-of Gemini free model has reduced significantly , not able to perform complex tasks
+of Gemini free model has reduced significantly , 
 
 *** These are some of real questions & responses from the agent tested by me on Fronted
 
-### Frontend deployed url -> https://lang-agent-ajdr.vercel.app/
-Note -> It might take 1 minute to spin up backedn if it is inactive for long time (hosted on free service)
--> It might not repsonse if it have exceeded the Api limit (free tier)
--> It supports simpler queries for now 
--> Backedn is hosted from Staging branch 
--> if backend is run on locally it supports a bit complex queries 
--> the deployed backend is live from STAGING branch
+
 
 
 
