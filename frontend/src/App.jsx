@@ -109,19 +109,6 @@ function App() {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <button
-            onClick={() => setShowSettings(!showSettings)}
-            style={{
-              padding: '8px',
-              background: showSettings ? '#f3f4f6' : 'transparent',
-              border: 'none',
-              borderRadius: '8px',
-              cursor: 'pointer',
-              color: '#6b7280'
-            }}
-          >
-            ⚙️
-          </button>
-          <button
             onClick={() => setChatHistory([])}
             style={{
               padding: '8px 16px',
