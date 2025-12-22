@@ -215,5 +215,8 @@ Note -> It might take 1 minute to spin up backedn if it is inactive for long tim
 -> It might not repsonse if it have exceeded the Api limit (free tier)
 -> It supports simpler queries for now 
 -> Backedn is hosted from Staging branch 
+-> if backend is run on locally it supports a bit complex queries 
+-> the deployed backend is live from STAGING branch
+
 
 
