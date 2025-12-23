@@ -210,6 +210,8 @@ of Gemini free model has reduced significantly ,
 
 *** These are some of real questions & responses from the agent tested by me on Fronted
 
+Frontend Url -> https://lang-agent-ajdr.vercel.app/
+
 
 
 
